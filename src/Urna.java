@@ -8,7 +8,9 @@ public class Urna {
     int c2 = 0;
     int c3 = 0;
     int totbranco = 0;
-    
+    int senha;
+    int totvotos = (c1+c2+c3)/2;
+    // int senhaadm = 564;
 
 
    
@@ -20,22 +22,29 @@ public class Urna {
 
 
     void contabilizarvotos(){
-        
+        System.out.printf("%s\n", "=-".repeat(30));
+        System.out.println("MENU A");
         System.out.println("olá caro eleitor vamos votar ?\n1 - iniciar votação\n2 - encerrar votação\n3 - sair");
-            opcao = entrada.nextInt();
+        System.out.printf("%s\n", "=-".repeat(30));   
+         opcao = entrada.nextInt();
+        
             // menu A
         do{
         
 
         if(opcao == 1){
-            System.out.println("");
+            System.err.printf("%s\n", "=-".repeat(30));
+            System.out.println("MENU B");
             System.out.println("Oque você deseja:\n1 - votar\n2 - sair");
+            System.err.printf("%s\n", "-=".repeat(30));
             opcao = entrada.nextInt();
 
             
         }switch (opcao) {
             case 1:
-            System.out.println("caro eleitor você pode votar nos seguintes candidatos:\n45 - Silvério Reais (PP)\n20 - Monteiro Lobato (PJ)\n12 - Elis Regina (PSJ)\nvotos nulos - digite qualquer número");
+            System.out.printf("%s\n", "=-".repeat(30));
+            System.out.println("caro eleitor você pode votar nos seguintes candidatos:\n45 - Silvério Reais (PP)\n20 - Monteiro Lobato (PJ)\n12 - Elis Regina (PSJ)\nvotos nulos - digite qualquer númer");
+            System.out.printf("%s\n", "=-".repeat(30));
             votos= entrada.nextInt();
             if (votos == 45){
                 c1 ++;
@@ -51,8 +60,10 @@ public class Urna {
             }
 
             case 2:
-            System.out.println("");
+            System.out.printf("%s\n", "=-".repeat(30));
+            System.out.println("MENU A");
             System.out.println("olá caro eleitor vamos votar ?\n1 - iniciar votação\n2 - encerrar votação\n3 - sair");
+            System.out.printf("%s\n", "=-".repeat(30));
             opcao = entrada.nextInt();
             
             if (opcao== 2){
@@ -72,14 +83,20 @@ public class Urna {
 
 }
     void apuraçãodevotos(){
-        System.out.println("");
-        System.out.printf("Aqui está o resultado da votação\nSilvério Reais (PP) teve um total de %d votos\nMonteiro Lobato (PJ) teve um total de %d votos\nElis Regina (PJS) teve um total de %d votos", c1, c2, c3);
-        int totvotos = (c1+c2+c3)/2;
-        System.out.println("");
+
         
+        do{
+        System.out.println("Digite aqui a senha para saber o resultado da eleição");
+        senha = entrada.nextInt();
+
+        if(senha==564){
+        System.out.printf("%s\n", "-=".repeat(30));
+        System.out.println("RESULTADO DA ELEIÇÃO");
+        System.out.printf("Aqui está o resultado da votação\nSilvério Reais (PP) teve um total de %d votos\nMonteiro Lobato (PJ) teve um total de %d votos\nElis Regina (PJS) teve um total de %d votos", c1, c2, c3);
         if (c1>totvotos){
             System.out.println("Silvério Reais (PP) você foi o ganhador desta eleição");
             System.out.println("");
+        
         }
         else if(c2>totvotos){
             System.out.println("Parabéns Monteiro Lobato (PJ) você foi o ganhador desta eleição");
@@ -92,6 +109,14 @@ public class Urna {
         else{
             System.out.println("Não temos um candidato ainda");
         }
+        System.out.printf("%s\n", "-=".repeat(30));
+    }
+    }while(senha!= 564);
+        
+        
+
+    
+        
         
         
 
