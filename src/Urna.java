@@ -9,7 +9,8 @@ public class Urna {
     int c3 = 0;
     int totbranco = 0;
     int senha;
-    int totvotos = (c1+c2+c3)/2;
+    int senhaadm = 564;
+    int totvotos = (c1+c2+c3)/2+1;
     // int senhaadm = 564;
 
 
@@ -92,26 +93,27 @@ public class Urna {
         if(senha==564){
         System.out.printf("%s\n", "-=".repeat(30));
         System.out.println("RESULTADO DA ELEIÇÃO");
-        System.out.printf("Aqui está o resultado da votação\nSilvério Reais (PP) teve um total de %d votos\nMonteiro Lobato (PJ) teve um total de %d votos\nElis Regina (PJS) teve um total de %d votos", c1, c2, c3);
+        System.out.printf("%s\n", "-=".repeat(30));
+        System.out.printf("Silvério Reais (PP) teve um total de %d votos\nMonteiro Lobato (PJ) teve um total de %d votos\nElis Regina (PJS) teve um total de %d votos", c1, c2, c3);
         if (c1>totvotos){
-            System.out.println("Silvério Reais (PP) você foi o ganhador desta eleição");
-            System.out.println("");
+            System.out.println("\nParabéns Silvério Reais (PP) você foi o ganhador desta eleição");
+            
         
         }
         else if(c2>totvotos){
-            System.out.println("Parabéns Monteiro Lobato (PJ) você foi o ganhador desta eleição");
-            System.out.println("");
+            System.out.println("\nParabéns Monteiro Lobato (PJ) você foi o ganhador desta eleição");
+            
         }
         else if (c3>totvotos){
-            System.out.println("Parabéns Elis Regina (PJS) você foi o ganhador desta eleição");
-            System.out.println("");
+            System.out.println("\nParabéns Elis Regina (PJS) você foi o ganhador desta eleição");
+            
         }
         else{
-            System.out.println("Não temos um candidato ainda");
+            System.out.println("\nNão temos um candidato ainda");
         }
         System.out.printf("%s\n", "-=".repeat(30));
     }
-    }while(senha!= 564);
+    }while(senha!= senhaadm);
         
         
 
