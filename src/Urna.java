@@ -11,7 +11,7 @@ public class Urna {
     int senha;
     int senhaadm = 564;
     int totvotos = (c1+c2+c3)/2+1;
-    // int senhaadm = 564;
+    
 
 
    
