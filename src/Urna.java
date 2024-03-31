@@ -11,7 +11,14 @@ public class Urna {
     int totvotosnulos = 0;
     int senha;
     int senhaadm = 564;
+<<<<<<< HEAD
     int totvotos = ((c1+c2+c3)/2)+1;
+=======
+    int totvotos = (c1+c2+c3)/2+1;
+    
+
+
+>>>>>>> ddd8e4cca6c395882e70919040e175fb7c4a7573
    
     Scanner entrada = new Scanner(System.in);
 
